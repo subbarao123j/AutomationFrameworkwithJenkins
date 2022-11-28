@@ -7,5 +7,10 @@ public class Utility {
 		
 				
 	}
+	
+	public void handleAlert() {
+		
+		
+	}
 
 }
