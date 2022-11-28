@@ -12,5 +12,10 @@ public class Utility {
 		
 		
 	}
+	
+	public void dismissAlert() {
+		
+		
+	}
 
 }
