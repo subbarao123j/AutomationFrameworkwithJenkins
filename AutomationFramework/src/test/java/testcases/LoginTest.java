@@ -9,21 +9,36 @@ import pages.LogOut;
 import pages.Login;
 
 public class LoginTest extends BaseClass {
-	@Test
+	
+	Login login;
+	LogOut logout;
+	@Test(description = "", priority = 1)
 	public void loginToHRM() {
 
-		Login login = PageFactory.initElements(driver, Login.class);
+		 login = PageFactory.initElements(driver, Login.class);
 
-		LogOut logout = PageFactory.initElements(driver, LogOut.class);
+		 logout = PageFactory.initElements(driver, LogOut.class);
+
+		logger = report.createTest("Login Test for OrangeHRM");
 
 		login.validateHomePage();
 
+		logger.pass("Home page validated");
+
 		login.enterUserName();
+		logger.info("User name entered");
+		
 		login.enterPassword();
+		logger.info("Pasword entered");
+		
 		login.clickLoginButton();
+		logger.info("Login entered");
 
 		logout.clickLogout();
+		
+		logger.pass("User is able to logout");
 
 	}
-
+	
+	
 }

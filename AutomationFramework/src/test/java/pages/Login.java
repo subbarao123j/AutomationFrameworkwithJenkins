@@ -5,7 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
+import dataProviiderFactory.DataProviderFactory;
 import dataProviiderFactory.ExcelDataProvider;
+import helper.Utility;
 
 public class Login {
 
@@ -26,8 +28,10 @@ public class Login {
 	WebElement login;
 
 	public void validateHomePage() {
+		
+		Utility.validatingContainsTitle(driver, "OrangeHRM");
 
-		Assert.assertTrue(driver.getCurrentUrl().contains("login"), "Home page doesnot appear");
+		//Assert.assertTrue(driver.getCurrentUrl().contains("login"), "Home page doesnot appear");
 
 	}
 
@@ -51,7 +55,7 @@ public class Login {
 
 		System.out.println("Log Info usernaame entered");
 
-		username.sendKeys(new ExcelDataProvider().getCellData("Login", 1, 0));
+		username.sendKeys(DataProviderFactory.getExcel().getCellData("Login", 1, 0));
 
 	}
 
@@ -59,7 +63,7 @@ public class Login {
 
 		System.out.println("Log Info Password entered");
 
-		password.sendKeys(new ExcelDataProvider().getCellData("Login", 1, 1));
+		password.sendKeys(DataProviderFactory.getExcel().getCellData("Login", 1, 1));
 
 	}
 

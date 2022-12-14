@@ -6,7 +6,10 @@
       <class name="testcases.LoginTest">
         <methods>
           <include name="loginToHRM"/>
+          <include name="closeSession"/>
           <include name="setupBrowser"/>
+          <include name="appendReport"/>
+          <include name="setupReport"/>
         </methods>
       </class> <!-- testcases.LoginTest -->
     </classes>

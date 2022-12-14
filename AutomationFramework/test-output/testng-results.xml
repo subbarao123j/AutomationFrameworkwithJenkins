@@ -2,20 +2,35 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-11-26T20:53:09 SGT" name="Default suite" finished-at="2022-11-26T20:53:29 SGT" duration-ms="19523">
+  <suite started-at="2022-12-14T13:07:12 SGT" name="Default suite" finished-at="2022-12-14T13:07:33 SGT" duration-ms="21231">
     <groups>
     </groups>
-    <test started-at="2022-11-26T20:53:09 SGT" name="Default test" finished-at="2022-11-26T20:53:29 SGT" duration-ms="19523">
+    <test started-at="2022-12-14T13:07:12 SGT" name="Default test" finished-at="2022-12-14T13:07:33 SGT" duration-ms="21231">
       <class name="testcases.LoginTest">
-        <test-method is-config="true" signature="setupBrowser()[pri:0, instance:testcases.LoginTest@37d4349f]" started-at="2022-11-26T20:53:09 SGT" name="setupBrowser" finished-at="2022-11-26T20:53:21 SGT" duration-ms="11625" status="PASS">
+        <test-method is-config="true" signature="setupReport()[pri:0, instance:testcases.LoginTest@316bcf94]" started-at="2022-12-14T13:07:11 SGT" name="setupReport" finished-at="2022-12-14T13:07:12 SGT" duration-ms="197" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupReport -->
+        <test-method is-config="true" signature="setupBrowser()[pri:0, instance:testcases.LoginTest@316bcf94]" started-at="2022-12-14T13:07:12 SGT" name="setupBrowser" finished-at="2022-12-14T13:07:24 SGT" duration-ms="12064" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupBrowser -->
-        <test-method signature="loginToHRM()[pri:0, instance:testcases.LoginTest@37d4349f]" started-at="2022-11-26T20:53:21 SGT" name="loginToHRM" finished-at="2022-11-26T20:53:28 SGT" duration-ms="7638" status="PASS">
+        <test-method signature="loginToHRM()[pri:1, instance:testcases.LoginTest@316bcf94]" started-at="2022-12-14T13:07:24 SGT" name="loginToHRM" finished-at="2022-12-14T13:07:32 SGT" duration-ms="8351" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginToHRM -->
-        <test-method is-config="true" signature="closeSession()[pri:0, instance:testcases.LoginTest@37d4349f]" started-at="2022-11-26T20:53:28 SGT" name="closeSession" finished-at="2022-11-26T20:53:29 SGT" duration-ms="229" status="PASS">
+        <test-method is-config="true" signature="appendReport(org.testng.ITestResult)[pri:0, instance:testcases.LoginTest@316bcf94]" started-at="2022-12-14T13:07:32 SGT" name="appendReport" finished-at="2022-12-14T13:07:33 SGT" duration-ms="480" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginToHRM status=SUCCESS method=LoginTest.loginToHRM()[pri:1, instance:testcases.LoginTest@316bcf94] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- appendReport -->
+        <test-method is-config="true" signature="closeSession()[pri:0, instance:testcases.LoginTest@316bcf94]" started-at="2022-12-14T13:07:33 SGT" name="closeSession" finished-at="2022-12-14T13:07:33 SGT" duration-ms="303" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeSession -->
