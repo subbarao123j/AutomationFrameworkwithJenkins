@@ -55,5 +55,13 @@ public class ExcelDataProvider {
 		
 		
 	}
+	
+	
+	public int getRows(String sheetName) {
+		
+		return wb.getSheet(sheetName).getPhysicalNumberOfRows();
+		
+	}
+
 
 }
