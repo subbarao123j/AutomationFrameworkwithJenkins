@@ -6,8 +6,8 @@
 	<description>AutomationFramework for UI Test</description>
 
 	<dependencies>
-	
-	
+
+
 		<dependency>
 			<groupId>io.rest-assured</groupId>
 			<artifactId>rest-assured</artifactId>
@@ -26,7 +26,7 @@
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>7.6.1</version>
+			<version>6.14.3</version>
 
 		</dependency>
 
@@ -52,7 +52,7 @@
 		</dependency>
 
 
-	
+
 
 	</dependencies>
 
@@ -62,9 +62,31 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.0.0-M7</version>
-		
 
+
+				<configuration>
+				
+
+
+					<systemPropertyVariables>
+
+						<xmlfiles>${xmlfiles}</xmlfiles>
+
+						<!-- 
+						<username>${username}</username>
+						<password>${password}</password>
+						<url>${url}</url>
+						<browser>${browser}</browser>-->
+
+
+					</systemPropertyVariables>
+					<suiteXmlFiles>
+						<suiteXmlFile>XMLFiles\${xmlfiles}</suiteXmlFile>
+					</suiteXmlFiles>
+
+				</configuration>
+				
+				
 
 			</plugin>
 
@@ -74,8 +96,5 @@
 
 	</build>
 
-	<properties>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
-	</properties>
+
 </project>
