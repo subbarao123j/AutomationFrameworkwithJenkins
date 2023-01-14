@@ -10,13 +10,14 @@ import pages.Login;
 
 
 
-
-public class LoginTest extends BaseClass {
+//@Parameters({"username","password"})
+@Test
+public class LoginTest2 extends BaseClass {
 	
 	
 	Login login;
 	LogOut logout;
-	@Test(description = "", priority = 1)
+	
 	public void loginToHRM() {
 
 		 login = PageFactory.initElements(driver, Login.class);

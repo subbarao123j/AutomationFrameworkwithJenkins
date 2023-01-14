@@ -1,27 +1,29 @@
 package testcases;
 
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import dataProviiderFactory.DataProviderFactory;
+import dataProviiderFactory.ExcelDataProvider;
 import helper.BaseClass;
 import pages.LogOut;
 import pages.Login;
 
 
 
+public class LoginTestWithLoginParameters extends BaseClass {
 
-public class LoginTest extends BaseClass {
-	
-	
 	Login login;
 	LogOut logout;
-	@Test(description = "", priority = 1)
-	public void loginToHRM() {
+	@Parameters({"username","password"})
+	@Test
+	public void loginToHRM(String uname, String pass) {
 
-		 login = PageFactory.initElements(driver, Login.class);
+		login = PageFactory.initElements(driver, Login.class);
 
-		 logout = PageFactory.initElements(driver, LogOut.class);
+		logout = PageFactory.initElements(driver, LogOut.class);
 
 		logger = report.createTest("Login Test for OrangeHRM");
 
@@ -29,20 +31,21 @@ public class LoginTest extends BaseClass {
 
 		logger.pass("Home page validated");
 
-		login.enterUserName();
+		login.enterUserName(uname);
 		logger.info("User name entered");
-		
-		login.enterPassword();
+
+		login.enterPassword(pass);
 		logger.info("Pasword entered");
-		
+
 		login.clickLoginButton();
 		logger.info("Login entered");
 
 		logout.clickLogout();
-		
+
 		logger.pass("User is able to logout");
 
 	}
+
 	
-	
+
 }

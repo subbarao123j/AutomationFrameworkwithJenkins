@@ -11,13 +11,15 @@ import pages.Login;
 
 
 
-public class LoginTest extends BaseClass {
+public class LoginFromJenkins extends BaseClass {
 	
 	
 	Login login;
 	LogOut logout;
+	
+	@Parameters({"username" , "password"})
 	@Test(description = "", priority = 1)
-	public void loginToHRM() {
+	public void loginToHRM(String uname, String pass) {
 
 		 login = PageFactory.initElements(driver, Login.class);
 
@@ -29,10 +31,10 @@ public class LoginTest extends BaseClass {
 
 		logger.pass("Home page validated");
 
-		login.enterUserName();
+		login.enterUserName(uname);
 		logger.info("User name entered");
 		
-		login.enterPassword();
+		login.enterPassword(pass);
 		logger.info("Pasword entered");
 		
 		login.clickLoginButton();
