@@ -31,7 +31,7 @@ public class BaseClass {
 		
 		System.out.println("LOG:Info- Before Suite Running-Setting up report");
 
-		ExtentHtmlReporter reporter = new ExtentHtmlReporter(new File("./Report/HRM_ATT_DEMO_"+Utility.getTime()+".html"));
+		ExtentHtmlReporter reporter = new ExtentHtmlReporter(new File("./Report/HRM_ATT_DEMO_AQE"+Utility.getTime()+".html"));
 
 		report = new ExtentReports();
 		report.attachReporter(reporter);

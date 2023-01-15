@@ -25,7 +25,7 @@ public class LoginFromJenkins extends BaseClass {
 
 		 logout = PageFactory.initElements(driver, LogOut.class);
 
-		logger = report.createTest("Login Test for OrangeHRM");
+		logger = report.createTest("Login Test for OrangeHRM(Demo)");
 
 		login.validateHomePage();
 
